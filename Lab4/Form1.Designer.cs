@@ -1,4 +1,4 @@
-﻿namespace Lab3
+﻿namespace Lab4
 {
     partial class Form1
     {
@@ -31,7 +31,7 @@
             this.tbNumberOfElements = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnStart = new System.Windows.Forms.Button();
-            this.tbDesiredValue = new System.Windows.Forms.TextBox();
+            this.tbd1 = new System.Windows.Forms.TextBox();
             this.dgvFinalCoefficients = new System.Windows.Forms.DataGridView();
             this.dgvInitialCoefficients = new System.Windows.Forms.DataGridView();
             this.dgvInputSignals = new System.Windows.Forms.DataGridView();
@@ -41,7 +41,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.function = new System.Windows.Forms.ComboBox();
+            this.tbd2 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinalCoefficients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInitialCoefficients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInputSignals)).BeginInit();
@@ -49,7 +50,7 @@
             // 
             // tbNumberOfElements
             // 
-            this.tbNumberOfElements.Location = new System.Drawing.Point(251, 543);
+            this.tbNumberOfElements.Location = new System.Drawing.Point(258, 499);
             this.tbNumberOfElements.Name = "tbNumberOfElements";
             this.tbNumberOfElements.Size = new System.Drawing.Size(175, 35);
             this.tbNumberOfElements.TabIndex = 25;
@@ -57,7 +58,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(12, 546);
+            this.label6.Location = new System.Drawing.Point(19, 499);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(233, 30);
             this.label6.TabIndex = 24;
@@ -65,7 +66,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(523, 558);
+            this.btnStart.Location = new System.Drawing.Point(530, 576);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(131, 40);
             this.btnStart.TabIndex = 23;
@@ -73,17 +74,17 @@
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
-            // tbDesiredValue
+            // tbd1
             // 
-            this.tbDesiredValue.Location = new System.Drawing.Point(251, 481);
-            this.tbDesiredValue.Name = "tbDesiredValue";
-            this.tbDesiredValue.Size = new System.Drawing.Size(175, 35);
-            this.tbDesiredValue.TabIndex = 22;
+            this.tbd1.Location = new System.Drawing.Point(77, 616);
+            this.tbd1.Name = "tbd1";
+            this.tbd1.Size = new System.Drawing.Size(96, 35);
+            this.tbd1.TabIndex = 22;
             // 
             // dgvFinalCoefficients
             // 
             this.dgvFinalCoefficients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFinalCoefficients.Location = new System.Drawing.Point(781, 50);
+            this.dgvFinalCoefficients.Location = new System.Drawing.Point(788, 68);
             this.dgvFinalCoefficients.Name = "dgvFinalCoefficients";
             this.dgvFinalCoefficients.RowHeadersWidth = 72;
             this.dgvFinalCoefficients.RowTemplate.Height = 37;
@@ -93,7 +94,7 @@
             // dgvInitialCoefficients
             // 
             this.dgvInitialCoefficients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInitialCoefficients.Location = new System.Drawing.Point(369, 50);
+            this.dgvInitialCoefficients.Location = new System.Drawing.Point(376, 68);
             this.dgvInitialCoefficients.Name = "dgvInitialCoefficients";
             this.dgvInitialCoefficients.RowHeadersWidth = 72;
             this.dgvInitialCoefficients.RowTemplate.Height = 37;
@@ -103,7 +104,7 @@
             // dgvInputSignals
             // 
             this.dgvInputSignals.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInputSignals.Location = new System.Drawing.Point(12, 50);
+            this.dgvInputSignals.Location = new System.Drawing.Point(19, 68);
             this.dgvInputSignals.Name = "dgvInputSignals";
             this.dgvInputSignals.RowHeadersWidth = 72;
             this.dgvInputSignals.RowTemplate.Height = 37;
@@ -113,7 +114,7 @@
             // labelNumberOfIterations
             // 
             this.labelNumberOfIterations.AutoSize = true;
-            this.labelNumberOfIterations.Location = new System.Drawing.Point(865, 481);
+            this.labelNumberOfIterations.Location = new System.Drawing.Point(872, 499);
             this.labelNumberOfIterations.Name = "labelNumberOfIterations";
             this.labelNumberOfIterations.Size = new System.Drawing.Size(24, 30);
             this.labelNumberOfIterations.TabIndex = 18;
@@ -122,7 +123,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(615, 481);
+            this.label5.Location = new System.Drawing.Point(622, 499);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(223, 30);
             this.label5.TabIndex = 17;
@@ -131,16 +132,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(12, 481);
+            this.label4.Location = new System.Drawing.Point(25, 621);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(209, 30);
+            this.label4.Size = new System.Drawing.Size(36, 30);
             this.label4.TabIndex = 16;
-            this.label4.Text = "Желаемое значение";
+            this.label4.Text = "d1";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(724, 5);
+            this.label3.Location = new System.Drawing.Point(731, 23);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(347, 30);
             this.label3.TabIndex = 15;
@@ -149,7 +150,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(261, 5);
+            this.label2.Location = new System.Drawing.Point(268, 23);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(417, 30);
             this.label2.TabIndex = 14;
@@ -158,33 +159,39 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 5);
+            this.label1.Location = new System.Drawing.Point(19, 23);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(181, 30);
             this.label1.TabIndex = 13;
             this.label1.Text = "Входные сигналы";
             // 
-            // function
+            // tbd2
             // 
-            this.function.FormattingEnabled = true;
-            this.function.Items.AddRange(new object[] {
-            "Униполярная",
-            "Биполярная"});
-            this.function.Location = new System.Drawing.Point(697, 560);
-            this.function.Name = "function";
-            this.function.Size = new System.Drawing.Size(212, 38);
-            this.function.TabIndex = 26;
+            this.tbd2.Location = new System.Drawing.Point(77, 668);
+            this.tbd2.Name = "tbd2";
+            this.tbd2.Size = new System.Drawing.Size(96, 35);
+            this.tbd2.TabIndex = 27;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(25, 673);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 30);
+            this.label7.TabIndex = 26;
+            this.label7.Text = "d2";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1237, 764);
-            this.Controls.Add(this.function);
+            this.ClientSize = new System.Drawing.Size(1136, 741);
+            this.Controls.Add(this.tbd2);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.tbNumberOfElements);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnStart);
-            this.Controls.Add(this.tbDesiredValue);
+            this.Controls.Add(this.tbd1);
             this.Controls.Add(this.dgvFinalCoefficients);
             this.Controls.Add(this.dgvInitialCoefficients);
             this.Controls.Add(this.dgvInputSignals);
@@ -196,7 +203,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinalCoefficients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInitialCoefficients)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInputSignals)).EndInit();
@@ -210,7 +216,7 @@
         private TextBox tbNumberOfElements;
         private Label label6;
         private Button btnStart;
-        private TextBox tbDesiredValue;
+        private TextBox tbd1;
         private DataGridView dgvFinalCoefficients;
         private DataGridView dgvInitialCoefficients;
         private DataGridView dgvInputSignals;
@@ -220,6 +226,7 @@
         private Label label3;
         private Label label2;
         private Label label1;
-        private ComboBox function;
+        private TextBox tbd2;
+        private Label label7;
     }
 }

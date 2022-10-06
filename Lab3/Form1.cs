@@ -12,7 +12,7 @@ namespace Lab3
             function.SelectedIndex = 0;
         }
 
-        public void Teach()
+        public int Teach()
         {
             double d = double.Parse(tbDesiredValue.Text);
             double y;
@@ -72,12 +72,18 @@ namespace Lab3
                 dgvFinalCoefficients.Rows[i].Cells[0].Value = w[i];
             }
             labelNumberOfIterations.Text = j.ToString();
-
+            return j;
         }
 
         private void btnStart_Click(object sender, EventArgs e)
         {
-            Teach();
+            //Teach();
+            var sum = 0.0;
+            for (int i = 0; i < 11; i++)
+            {
+                sum += Teach();
+            }
+            labelNumberOfIterations.Text = (sum / 11.0).ToString();
         }
     }
 }

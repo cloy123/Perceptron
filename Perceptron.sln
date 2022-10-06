@@ -5,7 +5,11 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Perceptron", "Perceptron\Perceptron.csproj", "{30EC4D4C-C94C-4B2E-88EF-8956FF420B58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab3", "Lab3\Lab3.csproj", "{00CB1CEA-E2B4-42C8-9E8E-2994C5870041}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab3", "Lab3\Lab3.csproj", "{00CB1CEA-E2B4-42C8-9E8E-2994C5870041}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lab4", "Lab4\Lab4.csproj", "{612E813C-688B-41D7-97B1-E20D8BB785BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lab5", "Lab5\Lab5.csproj", "{1C15C09C-5560-4370-8ADA-083125DBD856}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{00CB1CEA-E2B4-42C8-9E8E-2994C5870041}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00CB1CEA-E2B4-42C8-9E8E-2994C5870041}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00CB1CEA-E2B4-42C8-9E8E-2994C5870041}.Release|Any CPU.Build.0 = Release|Any CPU
+		{612E813C-688B-41D7-97B1-E20D8BB785BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{612E813C-688B-41D7-97B1-E20D8BB785BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{612E813C-688B-41D7-97B1-E20D8BB785BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{612E813C-688B-41D7-97B1-E20D8BB785BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C15C09C-5560-4370-8ADA-083125DBD856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C15C09C-5560-4370-8ADA-083125DBD856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C15C09C-5560-4370-8ADA-083125DBD856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C15C09C-5560-4370-8ADA-083125DBD856}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
