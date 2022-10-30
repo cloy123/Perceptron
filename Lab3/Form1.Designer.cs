@@ -42,6 +42,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.function = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tbH = new System.Windows.Forms.TextBox();
+            this.randomCoeff = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinalCoefficients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInitialCoefficients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInputSignals)).BeginInit();
@@ -175,11 +178,40 @@
             this.function.Size = new System.Drawing.Size(212, 38);
             this.function.TabIndex = 26;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(211, 610);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(25, 30);
+            this.label7.TabIndex = 27;
+            this.label7.Text = "η";
+            // 
+            // tbH
+            // 
+            this.tbH.Location = new System.Drawing.Point(251, 610);
+            this.tbH.Name = "tbH";
+            this.tbH.Size = new System.Drawing.Size(175, 35);
+            this.tbH.TabIndex = 28;
+            // 
+            // randomCoeff
+            // 
+            this.randomCoeff.Location = new System.Drawing.Point(523, 632);
+            this.randomCoeff.Name = "randomCoeff";
+            this.randomCoeff.Size = new System.Drawing.Size(131, 40);
+            this.randomCoeff.TabIndex = 29;
+            this.randomCoeff.Text = "random";
+            this.randomCoeff.UseVisualStyleBackColor = true;
+            this.randomCoeff.Click += new System.EventHandler(this.randomCoeff_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1237, 764);
+            this.Controls.Add(this.randomCoeff);
+            this.Controls.Add(this.tbH);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.function);
             this.Controls.Add(this.tbNumberOfElements);
             this.Controls.Add(this.label6);
@@ -221,5 +253,8 @@
         private Label label2;
         private Label label1;
         private ComboBox function;
+        private Label label7;
+        private TextBox tbH;
+        private Button randomCoeff;
     }
 }
