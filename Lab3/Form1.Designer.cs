@@ -45,6 +45,8 @@
             this.label7 = new System.Windows.Forms.Label();
             this.tbH = new System.Windows.Forms.TextBox();
             this.randomCoeff = new System.Windows.Forms.Button();
+            this.startWithRandom = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinalCoefficients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInitialCoefficients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInputSignals)).BeginInit();
@@ -68,7 +70,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(523, 558);
+            this.btnStart.Location = new System.Drawing.Point(697, 632);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(131, 40);
             this.btnStart.TabIndex = 23;
@@ -86,11 +88,11 @@
             // dgvFinalCoefficients
             // 
             this.dgvFinalCoefficients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvFinalCoefficients.Location = new System.Drawing.Point(781, 50);
+            this.dgvFinalCoefficients.Location = new System.Drawing.Point(736, 50);
             this.dgvFinalCoefficients.Name = "dgvFinalCoefficients";
             this.dgvFinalCoefficients.RowHeadersWidth = 72;
             this.dgvFinalCoefficients.RowTemplate.Height = 37;
-            this.dgvFinalCoefficients.Size = new System.Drawing.Size(215, 400);
+            this.dgvFinalCoefficients.Size = new System.Drawing.Size(304, 400);
             this.dgvFinalCoefficients.TabIndex = 21;
             // 
             // dgvInitialCoefficients
@@ -100,7 +102,7 @@
             this.dgvInitialCoefficients.Name = "dgvInitialCoefficients";
             this.dgvInitialCoefficients.RowHeadersWidth = 72;
             this.dgvInitialCoefficients.RowTemplate.Height = 37;
-            this.dgvInitialCoefficients.Size = new System.Drawing.Size(215, 400);
+            this.dgvInitialCoefficients.Size = new System.Drawing.Size(285, 400);
             this.dgvInitialCoefficients.TabIndex = 20;
             // 
             // dgvInputSignals
@@ -110,7 +112,7 @@
             this.dgvInputSignals.Name = "dgvInputSignals";
             this.dgvInputSignals.RowHeadersWidth = 72;
             this.dgvInputSignals.RowTemplate.Height = 37;
-            this.dgvInputSignals.Size = new System.Drawing.Size(215, 400);
+            this.dgvInputSignals.Size = new System.Drawing.Size(297, 400);
             this.dgvInputSignals.TabIndex = 19;
             // 
             // labelNumberOfIterations
@@ -204,11 +206,32 @@
             this.randomCoeff.UseVisualStyleBackColor = true;
             this.randomCoeff.Click += new System.EventHandler(this.randomCoeff_Click);
             // 
+            // startWithRandom
+            // 
+            this.startWithRandom.Location = new System.Drawing.Point(523, 700);
+            this.startWithRandom.Name = "startWithRandom";
+            this.startWithRandom.Size = new System.Drawing.Size(305, 40);
+            this.startWithRandom.TabIndex = 30;
+            this.startWithRandom.Text = "startWithRandom";
+            this.startWithRandom.UseVisualStyleBackColor = true;
+            this.startWithRandom.Click += new System.EventHandler(this.startWithRandom_Click);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(52, 775);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(34, 30);
+            this.label8.TabIndex = 31;
+            this.label8.Text = "ex";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1237, 764);
+            this.ClientSize = new System.Drawing.Size(1237, 865);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.startWithRandom);
             this.Controls.Add(this.randomCoeff);
             this.Controls.Add(this.tbH);
             this.Controls.Add(this.label7);
@@ -256,5 +279,7 @@
         private Label label7;
         private TextBox tbH;
         private Button randomCoeff;
+        private Button startWithRandom;
+        private Label label8;
     }
 }

@@ -21,13 +21,11 @@ namespace Lab5
             int a = 3;
             int c = 4;
             dataGridView1.RowCount = a;
-            dataGridView2.RowCount = a;
             dataGridView3.RowCount = c;
             dataGridView1.ColumnCount = b;
-            dataGridView2.ColumnCount = b;
             dataGridView3.ColumnCount = b;
             double u;
-            double pol = 0.5;
+            double pol = 0.8;//0.5;
             double[,] x = { { 1, 0, 0, 0 }, { 0, 0, 1, 0 }, { 0, 1, 0, 1 } };
             double[,] w = { { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 } };
             Random rnd = new Random();
@@ -37,14 +35,6 @@ namespace Lab5
                 for (int j = 0; j < b; j++)
                 {
                     dataGridView1.Rows[i].Cells[j].Value = x[i, j];
-                }
-            }
-
-            for (int i = 0; i < a; i++)
-            {
-                for (int j = 0; j < b; j++)
-                {
-                    dataGridView2.Rows[i].Cells[j].Value = x[i, j];
                 }
             }
 
@@ -69,9 +59,9 @@ namespace Lab5
                         {
                             y = 0;
                         }
-                        for (int s = 0; s < b; s++)
+                        for (int m = 0; m < b; m++)
                         {
-                            w[k, s] = w[k, s] * (1 - l) + N * x[i, s] * y;
+                            w[k, m] = w[k, m] * (1 - l) + N * x[i, m] * y;
                         }
                     }
                 }
@@ -85,7 +75,7 @@ namespace Lab5
                 }
                 t++;
             }
-            while (t < 10);
+            while (t < 100000);
             labelNumberOfIterations.Text = t.ToString();
         }
         

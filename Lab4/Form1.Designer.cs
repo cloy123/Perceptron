@@ -43,6 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tbd2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbPol = new System.Windows.Forms.TextBox();
+            this.random = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFinalCoefficients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInitialCoefficients)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInputSignals)).BeginInit();
@@ -66,7 +70,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(530, 576);
+            this.btnStart.Location = new System.Drawing.Point(693, 644);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(131, 40);
             this.btnStart.TabIndex = 23;
@@ -88,7 +92,7 @@
             this.dgvFinalCoefficients.Name = "dgvFinalCoefficients";
             this.dgvFinalCoefficients.RowHeadersWidth = 72;
             this.dgvFinalCoefficients.RowTemplate.Height = 37;
-            this.dgvFinalCoefficients.Size = new System.Drawing.Size(215, 400);
+            this.dgvFinalCoefficients.Size = new System.Drawing.Size(312, 400);
             this.dgvFinalCoefficients.TabIndex = 21;
             // 
             // dgvInitialCoefficients
@@ -98,7 +102,7 @@
             this.dgvInitialCoefficients.Name = "dgvInitialCoefficients";
             this.dgvInitialCoefficients.RowHeadersWidth = 72;
             this.dgvInitialCoefficients.RowTemplate.Height = 37;
-            this.dgvInitialCoefficients.Size = new System.Drawing.Size(215, 400);
+            this.dgvInitialCoefficients.Size = new System.Drawing.Size(309, 400);
             this.dgvInitialCoefficients.TabIndex = 20;
             // 
             // dgvInputSignals
@@ -108,7 +112,7 @@
             this.dgvInputSignals.Name = "dgvInputSignals";
             this.dgvInputSignals.RowHeadersWidth = 72;
             this.dgvInputSignals.RowTemplate.Height = 37;
-            this.dgvInputSignals.Size = new System.Drawing.Size(215, 400);
+            this.dgvInputSignals.Size = new System.Drawing.Size(273, 400);
             this.dgvInputSignals.TabIndex = 19;
             // 
             // labelNumberOfIterations
@@ -181,11 +185,51 @@
             this.label7.TabIndex = 26;
             this.label7.Text = "d2";
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(210, 553);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(42, 30);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "pol";
+            // 
+            // tbPol
+            // 
+            this.tbPol.Location = new System.Drawing.Point(258, 553);
+            this.tbPol.Name = "tbPol";
+            this.tbPol.Size = new System.Drawing.Size(96, 35);
+            this.tbPol.TabIndex = 29;
+            // 
+            // random
+            // 
+            this.random.Location = new System.Drawing.Point(530, 644);
+            this.random.Name = "random";
+            this.random.Size = new System.Drawing.Size(131, 40);
+            this.random.TabIndex = 30;
+            this.random.Text = "random";
+            this.random.UseVisualStyleBackColor = true;
+            this.random.Click += new System.EventHandler(this.random_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(530, 570);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(294, 40);
+            this.button1.TabIndex = 31;
+            this.button1.Text = "startWithRandom";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1136, 741);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.random);
+            this.Controls.Add(this.tbPol);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.tbd2);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.tbNumberOfElements);
@@ -228,5 +272,9 @@
         private Label label1;
         private TextBox tbd2;
         private Label label7;
+        private Label label8;
+        private TextBox tbPol;
+        private Button random;
+        private Button button1;
     }
 }
