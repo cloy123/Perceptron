@@ -25,7 +25,7 @@ namespace Lab5
             dataGridView1.ColumnCount = b;
             dataGridView3.ColumnCount = b;
             double u;
-            double pol = 0.8;//0.5;
+            double pol = 0.5;
             double[,] x = { { 1, 0, 0, 0 }, { 0, 0, 1, 0 }, { 0, 1, 0, 1 } };
             double[,] w = { { 1, 0, 0, 0 }, { 0, 1, 0, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 } };
             Random rnd = new Random();

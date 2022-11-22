@@ -3,6 +3,10 @@ namespace Lab44
     public partial class Form1 : Form
     {
 
+        // 1 ошибка 9% или 1/11
+        // 2 ошибки 45% или 5/11
+        // 3 ошибки 55% или 6/11
+
         double[] c4 = new double[] {1, 0, 1,
                                     1, 0, 1,
                                     1, 1, 1,
