@@ -28,6 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvX = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -44,6 +49,10 @@
             this.tbPol = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.result = new System.Windows.Forms.Label();
+            this.w1u = new System.Windows.Forms.Label();
+            this.w2u = new System.Windows.Forms.Label();
+            this.w3u = new System.Windows.Forms.Label();
+            this.w4u = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvW1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvW2)).BeginInit();
@@ -62,13 +71,31 @@
             // 
             // dgvX
             // 
+            this.dgvX.AllowUserToAddRows = false;
+            this.dgvX.AllowUserToDeleteRows = false;
+            this.dgvX.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvX.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvX.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvX.ColumnHeadersVisible = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvX.DefaultCellStyle = dataGridViewCellStyle1;
             this.dgvX.Location = new System.Drawing.Point(65, 97);
+            this.dgvX.MultiSelect = false;
             this.dgvX.Name = "dgvX";
+            this.dgvX.ReadOnly = true;
+            this.dgvX.RowHeadersVisible = false;
             this.dgvX.RowHeadersWidth = 72;
             this.dgvX.RowTemplate.Height = 37;
             this.dgvX.Size = new System.Drawing.Size(494, 351);
             this.dgvX.TabIndex = 1;
+            this.dgvX.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvX_CellClick);
+            this.dgvX.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvX_CellValueChanged);
             // 
             // comboBox1
             // 
@@ -86,13 +113,28 @@
             // 
             // dgvW1
             // 
+            this.dgvW1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvW1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvW1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvW1.ColumnHeadersVisible = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvW1.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvW1.Location = new System.Drawing.Point(691, 97);
+            this.dgvW1.MultiSelect = false;
             this.dgvW1.Name = "dgvW1";
+            this.dgvW1.ReadOnly = true;
+            this.dgvW1.RowHeadersVisible = false;
             this.dgvW1.RowHeadersWidth = 72;
             this.dgvW1.RowTemplate.Height = 37;
             this.dgvW1.Size = new System.Drawing.Size(547, 351);
             this.dgvW1.TabIndex = 3;
+            this.dgvW1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvW1_CellValueChanged);
             // 
             // label2
             // 
@@ -114,33 +156,78 @@
             // 
             // dgvW2
             // 
+            this.dgvW2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvW2.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvW2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvW2.ColumnHeadersVisible = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvW2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvW2.Location = new System.Drawing.Point(1356, 97);
+            this.dgvW2.MultiSelect = false;
             this.dgvW2.Name = "dgvW2";
+            this.dgvW2.ReadOnly = true;
+            this.dgvW2.RowHeadersVisible = false;
             this.dgvW2.RowHeadersWidth = 72;
             this.dgvW2.RowTemplate.Height = 37;
             this.dgvW2.Size = new System.Drawing.Size(524, 351);
             this.dgvW2.TabIndex = 6;
+            this.dgvW2.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvW2_CellValueChanged);
             // 
             // dgvW4
             // 
+            this.dgvW4.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvW4.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvW4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvW4.Location = new System.Drawing.Point(1356, 542);
+            this.dgvW4.ColumnHeadersVisible = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvW4.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dgvW4.Location = new System.Drawing.Point(1356, 555);
+            this.dgvW4.MultiSelect = false;
             this.dgvW4.Name = "dgvW4";
+            this.dgvW4.ReadOnly = true;
+            this.dgvW4.RowHeadersVisible = false;
             this.dgvW4.RowHeadersWidth = 72;
             this.dgvW4.RowTemplate.Height = 37;
             this.dgvW4.Size = new System.Drawing.Size(524, 351);
             this.dgvW4.TabIndex = 7;
+            this.dgvW4.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvW4_CellValueChanged);
             // 
             // dgvW3
             // 
+            this.dgvW3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvW3.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvW3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvW3.ColumnHeadersVisible = false;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvW3.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvW3.Location = new System.Drawing.Point(691, 555);
+            this.dgvW3.MultiSelect = false;
             this.dgvW3.Name = "dgvW3";
+            this.dgvW3.ReadOnly = true;
+            this.dgvW3.RowHeadersVisible = false;
             this.dgvW3.RowHeadersWidth = 72;
             this.dgvW3.RowTemplate.Height = 37;
             this.dgvW3.Size = new System.Drawing.Size(547, 351);
             this.dgvW3.TabIndex = 8;
+            this.dgvW3.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvW3_CellValueChanged);
             // 
             // label4
             // 
@@ -205,11 +292,51 @@
             this.result.TabIndex = 15;
             this.result.Text = "result";
             // 
+            // w1u
+            // 
+            this.w1u.AutoSize = true;
+            this.w1u.Location = new System.Drawing.Point(771, 52);
+            this.w1u.Name = "w1u";
+            this.w1u.Size = new System.Drawing.Size(51, 30);
+            this.w1u.TabIndex = 16;
+            this.w1u.Text = "u = ";
+            // 
+            // w2u
+            // 
+            this.w2u.AutoSize = true;
+            this.w2u.Location = new System.Drawing.Point(1431, 52);
+            this.w2u.Name = "w2u";
+            this.w2u.Size = new System.Drawing.Size(51, 30);
+            this.w2u.TabIndex = 17;
+            this.w2u.Text = "u = ";
+            // 
+            // w3u
+            // 
+            this.w3u.AutoSize = true;
+            this.w3u.Location = new System.Drawing.Point(753, 509);
+            this.w3u.Name = "w3u";
+            this.w3u.Size = new System.Drawing.Size(51, 30);
+            this.w3u.TabIndex = 18;
+            this.w3u.Text = "u = ";
+            // 
+            // w4u
+            // 
+            this.w4u.AutoSize = true;
+            this.w4u.Location = new System.Drawing.Point(1446, 509);
+            this.w4u.Name = "w4u";
+            this.w4u.Size = new System.Drawing.Size(51, 30);
+            this.w4u.TabIndex = 19;
+            this.w4u.Text = "u = ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1993, 932);
+            this.Controls.Add(this.w4u);
+            this.Controls.Add(this.w3u);
+            this.Controls.Add(this.w2u);
+            this.Controls.Add(this.w1u);
             this.Controls.Add(this.result);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.tbPol);
@@ -257,5 +384,9 @@
         private TextBox tbPol;
         private Label label6;
         private Label result;
+        private Label w1u;
+        private Label w2u;
+        private Label w3u;
+        private Label w4u;
     }
 }

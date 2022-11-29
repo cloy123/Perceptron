@@ -57,10 +57,10 @@ namespace Lab44
             comboBox1.SelectedIndex = 0;
 
             SetX(c4);
-            SetW(startW, 0);
-            SetW(startW, 1);
-            SetW(startW, 2);
-            SetW(startW, 3);
+            SetW(startW, 0, 0);
+            SetW(startW, 1, 0);
+            SetW(startW, 2, 0);
+            SetW(startW, 3, 0);
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -92,12 +92,14 @@ namespace Lab44
             {
                 sumX += d;
             }
+            double u = 0;
             for (int i = 0; i < w.Length; i++)
             {
                 x[i] = x[i] / Math.Sqrt(sumX);
                 w[i] = w[i] + (pol * (x[i] - w[i]));
+                u += x[i] * w[i];
             }
-            SetW(w, comboBox1.SelectedIndex);
+            SetW(w, comboBox1.SelectedIndex, u);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -136,6 +138,14 @@ namespace Lab44
                 for (int j = 0; j < 3; j++)
                 {
                     dgvX.Rows[i].Cells[j].Value = arr[i * 3 + j];
+                    //if (arr[i * 3 + j] > 0)
+                    //{
+                    //    dgvX.Rows[i].Cells[j].Style.BackColor = Color.Gray;
+                    //}
+                    //else
+                    //{
+                    //    dgvX.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    //}
                 }
             }
         }
@@ -170,7 +180,7 @@ namespace Lab44
             }
         }
 
-        private void SetW(double[] arr, int index)
+        private void SetW(double[] arr, int index, double u)
         {
             var dgv = GetWdgv(index);
             for (int i = 0; i < 5; i++)
@@ -178,7 +188,30 @@ namespace Lab44
                 for (int j = 0; j < 3; j++)
                 {
                     dgv.Rows[i].Cells[j].Value = arr[i * 3 + j];
+                    //if (arr[i * 3 + j] > 0)
+                    //{
+                    //    dgv.Rows[i].Cells[j].Style.BackColor = Color.Gray;
+                    //}
+                    //else
+                    //{
+                    //    dgv.Rows[i].Cells[j].Style.BackColor = Color.White;
+                    //}
                 }
+            }
+            switch (index)
+            {
+                case 0:
+                    w1u.Text = "u = " + u;
+                    break;
+                case 1:
+                    w2u.Text = "u = " + u;
+                    break;
+                case 2:
+                    w3u.Text = "u = " + u;
+                    break;
+                case 3:
+                    w4u.Text = "u = " + u;
+                    break;
             }
         }
 
@@ -194,6 +227,87 @@ namespace Lab44
                 }
             }
             return arr;
+        }
+
+        private void dgvX_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            double value = double.Parse(dgvX.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+            if (value > 0)
+            {
+                dgvX.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Gray;
+            }
+            else
+            {
+                dgvX.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.White;
+            }
+        }
+
+        private void dgvW1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            double value = double.Parse(dgvW1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+            if (value > 0)
+            {
+                dgvW1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Gray;
+            }
+            else
+            {
+                dgvW1.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.White;
+            }
+        }
+
+        private void dgvW2_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            double value = double.Parse(dgvW2.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+            if (value > 0)
+            {
+                dgvW2.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Gray;
+            }
+            else
+            {
+                dgvW2.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.White;
+            }
+        }
+
+        private void dgvW3_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            double value = double.Parse(dgvW3.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+            if (value > 0)
+            {
+                dgvW3.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Gray;
+            }
+            else
+            {
+                dgvW3.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.White;
+            }
+        }
+
+        private void dgvW4_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            double value = double.Parse(dgvW4.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+            if (value > 0)
+            {
+                dgvW4.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.Gray;
+            }
+            else
+            {
+                dgvW4.Rows[e.RowIndex].Cells[e.ColumnIndex].Style.BackColor = Color.White;
+            }
+        }
+
+        private void dgvX_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0 && e.ColumnIndex >= 0)
+            {
+                int value = int.Parse(dgvX.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+                if (value == 1)
+                {
+                    dgvX.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = 0;
+                }
+                else
+                {
+                    dgvX.Rows[e.RowIndex].Cells[e.ColumnIndex].Value = 1;
+                }
+            }
         }
     }
 }
